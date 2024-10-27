@@ -1,0 +1,127 @@
+/* CSS Reset pour une meilleure compatibilité */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style du body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 25px;
+}
+
+.menu-burger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+}
+
+.menu-burger span {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    border-radius: 5px;
+}
+
+/* Slideshow en arrière-plan */
+.slideshow-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.mySlides img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+.fade {
+    animation: fade 1.5s ease-in-out infinite;
+}
+
+/* Animation pour faire une transition fluide */
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* Style pour le menu burger et la navigation */
+.burger-menu {
+    display: none; /* Caché par défaut */
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 9;
+}
+
+.burger-menu.open {
+    display: block; /* Affiche le menu lorsqu'il est ouvert */
+}
+
+.burger-menu ul {
+    list-style-type: none;
+}
+
+.burger-menu li {
+    margin: 10px 0;
+}
+
+.burger-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.burger-menu a:hover {
+    color: #f0a500; /* Changement de couleur au survol */
+}
+
+/* Pour les images et les textes apparaissant en haut de l'image */
+header, footer {
+    color: #fff;
+    z-index: 10;
+}

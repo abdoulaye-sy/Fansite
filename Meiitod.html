@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Célébrité 1 - Fan Site</title>
+    <link rel="stylesheet" href="meiitod.css">
+</head>
+<body>
+    <!-- Header contenant le titre, la barre de recherche et le menu burger -->
+    <header>
+        <!-- Titre du site à gauche -->
+        <h1>MEIITOD</h1>
+
+        <!-- Barre de recherche au centre -->
+        <div class="search-bar">
+            <input type="text" placeholder="Rechercher...">
+           
+        </div>
+
+        <!-- Menu burger à droite -->
+        <div class="menu-burger">
+            <button class="burger-btn" onclick="toggleMenu()">☰</button>
+            <nav id="burger-menu">
+                <ul>
+                    <li><a href="#actualite">Actualité</a></li>
+                    <li><a href="#realisations">Réalisations</a></li>
+                    <li><a href="#evenements">Événements passés/à venir</a></li>
+                    <li><a href="#media">Photos et vidéos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Section principale contenant le carrousel d'images -->
+    <main>
+        <section id="carousel">
+            <div class="carousel-container">
+                <div class="carousel-item" style="background-image: url('images/images1.jpg');"></div>
+                <div class="carousel-item" style="background-image: url('images/22.jpg');"></div>
+                <div class="carousel-item" style="background-image: url('images/33.jpg');"></div>
+                <div class="carousel-item" style="background-image: url('images/images4.jpg');"></div>
+            </div>
+            <h1 class="carousel-title">MEIITOD</h1>
+        </section>
+
+        <section class="activites">
+            <div class="Actualités">
+                <h3>Actualités</h3>
+                <p class="description">
+                    lorem insum meiitod...............
+                </p>
+                <a href="#" class="Actualités-link">En savoir plus</a>
+            </div>
+
+            <div class="Réalisations">
+                <h3>Réalisations</h3>
+                <p class="description">
+                    Surprenez vos proches avec des bouquets uniques et personnalisés pour chaque anniversaire...
+                </p>
+                <a href="#" class="Réalisations-link">En savoir plus</a>
+            </div>
+
+            <div class="Événements">
+                <h3> Evénements</h3>
+                <p class="description">
+                    Ajoutez une touche florale élégante à vos réceptions avec nos créations...
+                </p>
+                <a href="#" class="Événements-link">En savoir plus</a>
+            </div>
+        </section>
+    </main>
+
+
+
+
+<section id="media" class="media-section">
+    <h2>Photos et Vidéos</h2>
+
+    <!-- Section Photos -->
+    <div class="media-gallery">
+        <h3>Photos</h3>
+        <div class="media-box">
+            <button class="prev" onclick="showPrevPhoto()">&#10094;</button>
+            <div class="media-content">
+                <div class="media-item photo">
+                    <img src="images/image5.jpg" alt="Photo 1">
+                </div>
+                <div class="media-item photo">
+                    <img src="images/image2.jpeg" alt="Photo 2">
+                </div>
+                <div class="media-item photo">
+                    <img src="images/images3.webp" alt="Photo 3">
+                </div>
+
+                <div class="media-item photo">
+                    <img src="images/image5.jpg" alt="Photo 3">
+                </div>
+
+          <div class="media-item photo">
+                    <img src="images/44.jpeg" alt="Photo 3">
+                </div>
+
+          </div>
+            <button class="next" onclick="showNextPhoto()">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Section Vidéos -->
+    <div class="media-gallery">
+        <h3>Vidéos</h3>
+        <div class="media-box">
+            <button class="prev" onclick="showPrevVideo()">&#10094;</button>
+            <div class="media-content">
+                <div class="media-item video">
+                    <video controls>
+                        <source src="videos/video1.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la lecture vidéo.
+                    </video>
+                </div>
+                <div class="media-item video">
+                    <video controls>
+                        <source src="videos/video2.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la lecture vidéo.
+                    </video>
+                </div>
+            </div>
+            <button class="next" onclick="showNextVideo()">&#10095;</button>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+    <!-- Footer contenant des liens sociaux, des liens vers d'autres sites et un formulaire de contact -->
+    <footer>
+        <div class="footer-section">
+            <h3>Liens vers les réseaux sociaux</h3>
+            <ul>
+                <li><a href="https://www.facebook.com/groups/554122376014718/">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Liens vers d’autres sites de fans</h3>
+            <ul>
+                <li><a href="https://www.facebook.com/groups/554122376014718/">Site de fans 1</a></li>
+                <li><a href="https://fr.deezercommunity.com/discussions-sur-les-fonctionnalites-32/meiitod-37067">Site de fans 2</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contactez-nous</h3>
+            <form action="#" method="post">
+                <input type="text" placeholder="Nom" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Votre message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </footer>
+
+    <!-- Script pour le menu burger et le carrousel automatique -->
+    <script>
+        // Fonction pour afficher ou masquer le menu burger
+        function toggleMenu() {
+            var menu = document.getElementById('burger-menu');
+            menu.classList.toggle('open');
+        }
+
+       // Script pour faire défiler automatiquement les images du carrousel
+let currentIndex = 0;
+const items = document.querySelectorAll('.carousel-item');
+const totalItems = items.length;
+
+function showNextImage() {
+    // Réinitialise les transformations pour toutes les images
+    items.forEach(item => {
+        item.style.transform = `translateX(100%)`;
+    });
+
+    // Applique la transition pour l'image suivante
+    items[currentIndex].style.transform = `translateX(-100%)`; // cache l'image actuelle
+    currentIndex = (currentIndex + 1) % totalItems; // change d'image
+    items[currentIndex].style.transform = `translateX(0)`; // montre la nouvelle image
+}
+
+setInterval(showNextImage, 3000);
+
+
+
+
+
+
+
+
+// Variables pour suivre les index actuels de photos et vidéos
+    let currentPhotoIndex = 0;
+    let currentVideoIndex = 0;
+
+    const photos = document.querySelectorAll('.media-gallery .photo');
+    const videos = document.querySelectorAll('.media-gallery .video');
+
+    // Afficher la photo précédente
+    function showPrevPhoto() {
+        photos[currentPhotoIndex].style.transform = 'translateX(100%)';
+        currentPhotoIndex = (currentPhotoIndex - 1 + photos.length) % photos.length;
+        photos[currentPhotoIndex].style.transform = 'translateX(0)';
+    }
+
+    // Afficher la photo suivante
+    function showNextPhoto() {
+        photos[currentPhotoIndex].style.transform = 'translateX(-100%)';
+        currentPhotoIndex = (currentPhotoIndex + 1) % photos.length;
+        photos[currentPhotoIndex].style.transform = 'translateX(0)';
+    }
+
+    // Afficher la vidéo précédente
+    function showPrevVideo() {
+        videos[currentVideoIndex].style.transform = 'translateX(100%)';
+        currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
+        videos[currentVideoIndex].style.transform = 'translateX(0)';
+    }
+
+    // Afficher la vidéo suivante
+    function showNextVideo() {
+        videos[currentVideoIndex].style.transform = 'translateX(-100%)';
+        currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+        videos[currentVideoIndex].style.transform = 'translateX(0)';
+    }
+
+
+    </script>
+</body>
+</html>

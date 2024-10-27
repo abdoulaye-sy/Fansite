@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fansite - Accueil</title>
+    <link rel="stylesheet" href="fansite.css">
+</head>
+
+<body>
+    <!-- Header avec logo, barre de recherche et menu burger -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo du site">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Rechercher...">
+        </div>
+        <div class="menu-burger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+<!-- Menu déroulant caché -->
+        <nav class="burger-menu">
+            <ul>
+                <li><a href="index1.html">SZE</a></li>
+                <li><a href="meiitod.html">MEIITOD</a></li>
+                <li><a href="index2.html">Yuston XIII B</a></li>
+                <li><a href="#">Mathieu Beo</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Diaporama d'images en arrière-plan -->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="images/images1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/images2.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/images3.webp" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/images4.webp" style="width:100%">
+        </div>
+    </div>
+
+    <!-- JavaScript pour faire défiler les images -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change l'image toutes les 3 secondes
+        }
+
+ // Script pour afficher/cacher le menu burger
+        function toggleMenu() {
+            const menu = document.querySelector('.burger-menu');
+            menu.classList.toggle('open');
+        }
+
+    </script>
+
+</body>
+
+</html>
