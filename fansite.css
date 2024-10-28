@@ -162,3 +162,153 @@ header, footer {
 }
 
 
+/* Style pour le titre du carrousel */
+.carousel-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Ombre pour une meilleure visibilité */
+    z-index: 11; /* Au-dessus des images */
+}
+
+
+
+
+
+/* Style de base pour le titre */
+.carousel-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 64px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    display: flex;
+    gap: 5px;
+    color: #fff; /* Couleur de base */
+}
+
+/* Style pour chaque lettre individuelle */
+.letter {
+    animation: pulsate 1.5s ease-in-out infinite;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff,
+        0 0 30px #ff00ff,
+        0 0 40px #0ff,
+        0 0 50px #0ff;
+}
+
+/* Animation de pulsation avec changement de couleur et montée/descente */
+@keyframes pulsate {
+    0%, 100% {
+        transform: translateY(0);
+        color: #ff00ff; /* Rose néon */
+        text-shadow:
+            0 0 5px #fff,
+            0 0 10px #ff00ff,
+            0 0 20px #ff00ff,
+            0 0 30px #ff00ff,
+            0 0 40px #0ff,
+            0 0 50px #0ff;
+    }
+    50% {
+        transform: translateY(-10px); /* Légère montée */
+        color: #00ffff; /* Cyan */
+        text-shadow:
+            0 0 5px #fff,
+            0 0 10px #00ffff,
+            0 0 20px #00ffff,
+            0 0 30px #00ffff,
+            0 0 40px #ff00ff,
+            0 0 50px #ff00ff;
+    }
+}
+
+/* Variation pour chaque lettre */
+.letter:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.letter:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.letter:nth-child(4) {
+    animation-delay: 0.6s;
+}
+.letter:nth-child(5) {
+    animation-delay: 0.8s;
+}
+.letter:nth-child(6) {
+    animation-delay: 1s;
+}
+.letter:nth-child(7) {
+    animation-delay: 1.2s;
+}
+
+
+
+/* --- Responsivité du site --- */
+
+/* Écran large (bureau) */
+@media (min-width: 1024px) { /* Applique ces styles pour les écrans de bureau et plus larges */
+    .search-bar input {
+        width: 300px; /* Largeur maximale du champ de recherche */
+    }
+    .carousel-title {
+        font-size: 64px; /* Taille du titre en grand format */
+    }
+}
+
+/* Tablettes */
+@media (min-width: 768px) and (max-width: 1023px) { /* Applique ces styles pour les tablettes */
+    .search-bar input {
+        width: 200px; /* Largeur réduite du champ de recherche pour les tablettes */
+    }
+    .carousel-title {
+        font-size: 48px; /* Taille intermédiaire du titre pour les tablettes */
+    }
+}
+
+/* Petits écrans (smartphones) */
+@media (max-width: 767px) { /* Applique ces styles pour les smartphones */
+    header {
+        padding: 10px 15px; /* Réduction des marges du header pour économiser de l'espace */
+    }
+    .logo img {
+        width: 80px; /* Taille réduite du logo sur mobile */
+    }
+    .search-bar input {
+        width: 150px; /* Champ de recherche plus étroit pour s'adapter aux petits écrans */
+        padding: 8px; /* Padding réduit pour équilibrer l'échelle */
+    }
+    .menu-burger span {
+        width: 20px; /* Réduction de la largeur des lignes du menu burger */
+    }
+    .carousel-title {
+        font-size: 32px; /* Taille réduite du titre dans le carrousel pour les smartphones */
+    }
+    .burger-menu ul {
+        padding: 0 10px; /* Réduction de l'espacement latéral dans le menu burger */
+    }
+}
+
+/* Très petits écrans (smartphones plus petits) */
+@media (max-width: 480px) { /* Applique ces styles pour les très petits écrans */
+    .search-bar input {
+        width: 100px; /* Champ de recherche très étroit pour petits appareils */
+    }
+    .carousel-title {
+        font-size: 24px; /* Taille encore plus réduite du titre pour une bonne lisibilité */
+        text-align: center; /* Centrage du titre pour s'adapter aux écrans étroits */
+    }
+    .slideshow-container {
+        height: 50vh; /* Hauteur réduite du diaporama pour libérer de l'espace vertical */
+    }
+}
